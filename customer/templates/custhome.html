@@ -1,0 +1,26 @@
+{%extends 'cbase.html'%}
+{%block body_block%}
+<div class="row">
+        {%for mobile in mobiles%}
+        <div class="col-4 mt-2">
+            <div class="card" style="width: 18rem;">
+                {%if mobile.image%}
+                <img src="{{mobile.image.url}}" class="card-img-top" alt="...">
+                {%endif%}
+                <div class="card-body">
+                    <h5 class="card-title">Mobile Name:{{mobile.mobile_name}}</h5>
+                    <p class="card-text">Colour:{{mobile.colour}}</p>
+                    <p class="card-text">Battery:{{mobile.battery}}</p>
+                    <p class="card-text">Storage:{{mobile.storage}}</p>
+                    <p class="card-text">Ram:{{mobile.ram}}</p>
+                    <p class="card-text">Processor:{{mobile.processor}}</p>
+                    <p class="card-text">Weight:{{mobile.weight}}</p>
+                    <p class="card-text">Price:{{mobile.price}}</p>
+
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+{%endblock%}
